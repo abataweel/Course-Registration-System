@@ -1,3 +1,7 @@
+import bcrypt
+import sqlite3
+import random
+import time
 class Course():
     def __init__(self,code,name,credits,lectureHours,grade,labHours=None,prerequisites=[],capacity=0,lecturer="",program="",schedule=[]):
         self.courseCode = code

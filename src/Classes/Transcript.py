@@ -1,3 +1,7 @@
+import bcrypt
+import sqlite3
+import random
+import time
 class TranscriptEntry():
     def __init__(self,studentID:int,course:str,grade:str,semester:str):
         self.studentID = studentID
