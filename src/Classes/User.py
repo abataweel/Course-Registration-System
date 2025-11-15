@@ -1,21 +1,25 @@
 import random
 class BaseUser():
-    def __init__(self,fname,mname,lname,*id,email,password,role):
+    def __init__(self,fname:str,mname:str,lname:str,*id:int,email:str,password:str,role:str):
         self.fname = fname
         self.mname = mname
         self.lname = lname
         self.email = email
+        self.id = id
         self.role = role
-        self.password = password
-        if not id:
-            self.id = "24"+random.randint(5)
+        self._password = password
+        
     # authentication methods
-    def login(self,id,password):
-        pass
-    def set_password(self,newpassword):
-        pass
+    def login(self,id:int,password:str):
+        #validation
+        #get hashed password from db and compare it with the hashed entered password
+        self.id==id and self._password==password
+    def set_password(self,newpassword:str):
+        #validation later
+         self._password = newpassword
+         #save new pass to db
     def getFullName(self):
-        return str(self.fname+self.mname+self.lname)
+        return f"{self.fname} {self.mname} {self.lname}"
     def getID(self):
         return self.id
     def getRole(self):

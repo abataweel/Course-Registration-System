@@ -1,5 +1,5 @@
 class Course():
-    def __init__(self,code,name,credits,lectureHours,*grade,labHours=None,prerequisites=[],capacity=0,lecturer="",program="",schedule=[]):
+    def __init__(self,code,name,credits,lectureHours,grade,labHours=None,prerequisites=[],capacity=0,lecturer="",program="",schedule=[]):
         self.courseCode = code
         self.name = name
         self.labHours = labHours
